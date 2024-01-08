@@ -67,52 +67,52 @@ const CustomerAdd = ({setLisäystila, setIsPositive, setShowMessage, setMessage}
         <form onSubmit={handleSubmit} className='formi'>
             <div className='formtiedot'>
                 <label>Customer ID</label>
-                <input type="text" minLength="5" maxLength="5" value={newCustomerId} onChange={({target}) => setNewCustomerId(target.value)} />
+                <input data-testid="id" type="text" minLength="5" maxLength="5" value={newCustomerId} onChange={({target}) => setNewCustomerId(target.value)} />
             </div>
             <div className='formtiedot'>
                 <label>Company Name</label>
-                <input type="text"  value={newCompanyName} onChange={({target}) => setNewCompanyName(target.value)} />
+                <input data-testid="companyname" type="text"  value={newCompanyName} onChange={({target}) => setNewCompanyName(target.value)} />
             </div>
             <div className='formtiedot'>
                 <label>Contact Name</label>
-                <input type="text" value={newContactName} onChange={({target}) => setNewContactName(target.value)} />
+                <input data-testid="contactname" type="text" value={newContactName} onChange={({target}) => setNewContactName(target.value)} />
             </div>
             <div className='formtiedot'>
                 <label>Contact Title</label>
-                <input type="text" value={newContactTitle} onChange={({target}) => setNewContactTitle(target.value)} />
+                <input data-testid="contactTitle" type="text" value={newContactTitle} onChange={({target}) => setNewContactTitle(target.value)} />
             </div>
             <div className='formtiedot'>
                 <label>Address</label>
-                <input type="text" value={newAddress} onChange={({target}) => setNewAddress(target.value)} />
+                <input data-testid="address" type="text" value={newAddress} onChange={({target}) => setNewAddress(target.value)} />
             </div>
             <div className='formtiedot'>
                 <label>City</label>
-                <input type="text" value={newCity} onChange={({target}) => setNewCity(target.value)} />
+                <input data-testid="city" type="text" value={newCity} onChange={({target}) => setNewCity(target.value)} />
             </div>
             <div className='formtiedot'>
                 <label>Region</label>
-                <input type="text" value={newRegion} onChange={({target}) => setNewRegion(target.value)} />
+                <input data-testid="region" type="text" value={newRegion} onChange={({target}) => setNewRegion(target.value)} />
             </div>
             <div className='formtiedot'>
                 <label>Postal Code</label>
-                <input type="text" value={newPostalCode} onChange={({target}) => setNewPostalCode(target.value)} />
+                <input data-testid="postcode" type="text" value={newPostalCode} onChange={({target}) => setNewPostalCode(target.value)} />
             </div>
             <div className='formtiedot'>
                 <label>Country</label>
-                <input type="text" value={newCountry} onChange={({target}) => setNewCountry(target.value)} />
+                <input data-testid="country" type="text" value={newCountry} onChange={({target}) => setNewCountry(target.value)} />
             </div>
             <div className='formtiedot'>
                 <label>Phone</label>
-                <input type="text" value={newPhone} onChange={({target}) => setNewPhone(target.value)} />
+                <input data-testid="phone" type="text" value={newPhone} onChange={({target}) => setNewPhone(target.value)} />
             </div>
             <div className='formtiedot'>
                 <label>Fax</label>
-                <input type="text"  value={newFax} onChange={({target}) => setNewFax(target.value)} />
+                <input data-testid="fax" type="text"  value={newFax} onChange={({target}) => setNewFax(target.value)} />
             </div>
            
             <br/>
             <div className='formButtonit'>
-                <input id="lähetä" className='btnn vihreäBtn' type="submit" />
+                <input data-testid="lähetä" id="lähetä" className='btnn vihreäBtn' type="submit" />
                 <input type="button" value="Takaisin" className='btnn punainenBtn' onClick={() => setLisäystila(false)}></input>
             </div>
         </form>

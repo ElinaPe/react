@@ -13,6 +13,7 @@ const [lisäysTila, setLisäystila] = useState(false)
 const [muokkaustila, setMuokkaustila] = useState(false)
 const [reload, reloadNow] = useState(false)
 const [muokattavaCustomer, setMuokattavaCustomer] = useState(false)
+const [poistettavaCustomer, setPoistettavaCustomer] = useState(false)
 const [search, setSearch] = useState("")
 
 useEffect(() => {
@@ -35,6 +36,47 @@ const editCustomer = (customer) => {
     setMuokattavaCustomer(customer)
     setMuokkaustila(true)
 }
+
+const deleteCustomer = (customer) => {
+
+    if(window.confirm(`Remove Customer ${customer.companyName}?`) === true){
+    
+    setPoistettavaCustomer(customer)
+    CustomerService.remove(customer.customerId)
+    .then(res => {
+        alert(res.status)
+        if(res.status === 200) {
+            setMessage(`Successfully removed customer ${customer.companyName}`)
+            setIsPositive(true)
+            setShowMessage(true)
+            window.scrollBy(0, -10000)
+            setTimeout(() => {
+                setShowMessage(false)
+            },5000)
+            
+        }reloadNow(!reload)
+    })
+    .catch(error => {
+        setMessage('Jotain meni nyt vikaan! Damn! ' + error)
+        setIsPositive(false)
+        setShowMessage(true)
+        window.scrollBy(0, -10000)
+        setTimeout(() => {
+            setShowMessage(false)
+        },7000)
+    })
+    }
+    else {
+        setMessage(`Ei poistettukaan ${customer.companyName} tyyppää`)
+        setIsPositive(true)
+        setShowMessage(true)
+        window.scrollBy(0, -10000)
+        setTimeout(() => {
+            setShowMessage(false)
+        },5000)
+        
+    }
+    }
 
   return (
     <div className='Customers UsersDiv'>
@@ -64,7 +106,7 @@ const editCustomer = (customer) => {
                     return (
                 <Customer key={c.customerId} customer={c} reloadNow={reloadNow} reload = {reload}
                 setIsPositive ={setIsPositive} setShowMessage= {setShowMessage} setMessage = {setMessage}
-                editCustomer={editCustomer} />
+                editCustomer={editCustomer} deleteCustomer={deleteCustomer} />
                 )}
             })
         }

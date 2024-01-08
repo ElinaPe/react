@@ -59,7 +59,7 @@ const deleteProduct = (product) => {
             <thead>
                 <tr >
                     <th>Id</th>
-                    <th>Product name</th>
+                    {/* <th>Product name</th> */}
                     <th>Supplier id</th>
                     <th>Category id</th>
                     <th>Quantity per unit</th>
@@ -72,15 +72,15 @@ const deleteProduct = (product) => {
             </thead>
             <tbody>
                 <tr key={product.productId}>
-                    <td>{product.productId}</td>
-                    <td>{product.productName}</td>
-                    <td>{product.supplierId}</td>
-                    <td>{product.categoryId}</td>
-                    <td>{product.quantityPerUnit}</td>
-                    <td>{product.unitPrice}</td>
-                    <td>{product.unitsInStock}</td>
-                    <td>{product.unitsOnOrder}</td>
-                    <td>{product.reorderLevel}</td>
+                    <td data-testid="id">{product.productId}</td>
+                    {/* <td>{product.productName}</td> */}
+                    <td data-testid="sup-id">{product.supplierId}</td>
+                    <td data-testid="cat-id">{product.categoryId}</td>
+                    <td data-testid="quant">{product.quantityPerUnit}</td>
+                    <td data-testid="price">{product.unitPrice}</td>
+                    <td data-testid="unitsStock">{product.unitsInStock}</td>
+                    <td data-testid="unitsOrder">{product.unitsOnOrder}</td>
+                    <td data-testid="reorder">{product.reorderLevel}</td>
                     <td>
                         {product.discontinued ? (
                             <span style={{ color: 'red' }}>Discontinued</span> ) : (
