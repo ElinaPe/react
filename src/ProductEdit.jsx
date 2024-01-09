@@ -70,42 +70,42 @@ const ProductEdit = ({setMuokkaustila, muokattavaProduct, setIsPositive, setShow
             </div>
             <div className='formtiedot'>
                 <label>Product Name</label>
-                <input type="text" value={newProductName} 
+                <input type="text" id="productName" value={newProductName} 
                 onChange={({target}) => setNewProductName(target.value)} />
             </div>
             <div className='formtiedot'>
                 <label>Supplier ID</label>
-                <input type="text" value={newSupplierID} 
+                <input type="text" id="supplierID" value={newSupplierID} 
                 onChange={({target}) => setNewSupplierID(target.value)} />
             </div>
             <div className='formtiedot'>
                 <label>Category ID</label>
-                <input type="text" value={newCategoryID} 
+                <input type="text" id="categoryID" value={newCategoryID} 
                 onChange={({target}) => setNewCategoryID(target.value)} />
             </div>
             <div className='formtiedot'>
                 <label>Quantity Per Unit</label>
-                <input type="text" value={newQuantityPerUnit} 
+                <input type="text" id="quantity" value={newQuantityPerUnit} 
                 onChange={({target}) => setQuantityPerUnit(target.value)} />
             </div>
             <div className='formtiedot'>
                 <label>Unit Price</label>
-                <input type="text"value={newUnitPrice} 
+                <input type="text" id="unitPrice" value={newUnitPrice} 
                 onChange={({target}) => setNewUnitPrice(target.value)} />
             </div>
             <div className='formtiedot'>
                 <label>Units In Stock</label>
-                <input type="text" value={newUnitsInStock} 
+                <input type="text" id="unitsInStock" value={newUnitsInStock} 
                 onChange={({target}) => setNewUnitsInStock(target.value)} />
             </div>
             <div className='formtiedot'>
                 <label>Units On Order</label>
-                <input type="text" value={newUnitsOnOrder} 
+                <input type="text" id="UnitsOnOrder" value={newUnitsOnOrder} 
                 onChange={({target}) => setNewUnitsOnOrder(target.value)} />
             </div>
             <div className='formtiedot'>
                 <label>Reorder Level</label>
-                <input type="text" value={newReorderLevel} 
+                <input type="text"  id="reorderLevel" value={newReorderLevel} 
                 onChange={({target}) => setNewReorderLevel(target.value)} />
             </div>
             <div className='formtiedot'>

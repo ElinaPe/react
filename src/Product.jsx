@@ -14,7 +14,7 @@ const deleteProduct = (product) => {
         ProductService.remove(product.productId)
     .then(res => {
         if(res.status === 200) {
-            setMessage(`Successfully removed product ${product.productName}`)
+            setMessage(`Poisto onnistui tuotteelle ${product.productName}`)
             setIsPositive(true)
             setShowMessage(true)
             window.scrollBy(0, -10000)
@@ -91,8 +91,8 @@ const deleteProduct = (product) => {
                 </tr>
             </tbody>
         </table>
-            <button className='btnn punainenBtn' onClick={() => deleteProduct(product)}>Delete</button>
-        <button className='btnn sininenBtn' onClick={() => editProduct(product)}>Edit</button>
+            <button id="deleteProduct" className='btnn punainenBtn' onClick={() => deleteProduct(product)}>Delete</button>
+        <button id="editProduct" className='btnn sininenBtn' onClick={() => editProduct(product)}>Edit</button>
             </div>
         }
     </div> 
