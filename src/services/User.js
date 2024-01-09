@@ -1,6 +1,7 @@
 import Axios from "axios"
 
 const baseUrl = "https://reactkurssi.azurewebsites.net/nw/users"
+//const baseUrl = "https://localhost:7205/nw/users"
 
 let token = null
 

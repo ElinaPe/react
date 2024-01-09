@@ -1,6 +1,7 @@
 import Axios from "axios"
 
 const baseUrl = "https://reactkurssi.azurewebsites.net/api/products"
+// const baseUrl = "https://localhost:7205/api/products"
 
 const getAll = () => {
     const request = Axios.get(baseUrl)

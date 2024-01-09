@@ -61,47 +61,47 @@ const ProductAdd = ({setLisäystila, setIsPositive, setShowMessage, setMessage})
         <form onSubmit={handleSubmit} className='formi'>
             <div className='formtiedot'>
                 <label>Product Name</label>
-                <input type="text" value={newProductName} 
+                <input data-testid="newProductName" type="text" value={newProductName} 
                 onChange={({target}) => setNewProductName(target.value)} />
             </div>
             <div className='formtiedot'>
-                <label>Supplier ID</label>
-                <input type="number"  value={newSupplierID} 
+                <label>Supplier Id</label>
+                <input data-testid="newSupplierID" type="number"  value={newSupplierID} 
                 onChange={({target}) => setNewSupplierID(target.value)} />
             </div>
             <div className='formtiedot'>
-                <label>Category ID</label>
-                <input type="number" value={newCategoryID} 
+                <label>Category Id</label>
+                <input data-testid="newCategoryID" type="number" value={newCategoryID} 
                 onChange={({target}) => setNewCategoryID(target.value)} />
             </div>
             <div className='formtiedot'>
                 <label>Quantity Per Unit</label>
-                <input type="text" value={newQuantityPerUnit} 
+                <input data-testid="newQuantityPerUnit" type="text" value={newQuantityPerUnit} 
                 onChange={({target}) => setQuantityPerUnit(target.value)} />
             </div>
             <div className='formtiedot'>
                 <label>Unit Price</label>
-                <input type="text" value={newUnitPrice} 
+                <input data-testid="newUnitPrice" type="text" value={newUnitPrice} 
                 onChange={({target}) => setNewUnitPrice(target.value)} />
             </div>
             <div className='formtiedot'>
                 <label>Units In Stock</label>
-                <input type="text" value={newUnitsInStock} 
+                <input data-testid="newUnitsInStock" type="text" value={newUnitsInStock} 
                 onChange={({target}) => setNewUnitsInStock(target.value)} />
             </div>
             <div className='formtiedot'>
                 <label>Units On Order</label>
-                <input type="text" value={newUnitsOnOrder} 
+                <input data-testid="newUnitsOnOrder" type="text" value={newUnitsOnOrder} 
                 onChange={({target}) => setNewUnitsOnOrder(target.value)} />
             </div>
             <div className='formtiedot'>
                 <label>Reorder Level</label>
-                <input type="text" value={newReorderLevel} 
+                <input data-testid="newReorderLevel" type="text" value={newReorderLevel} 
                 onChange={({target}) => setNewReorderLevel(target.value)} />
             </div>
             <div className='formtiedot'>
                 <label>Discontinued: 
-                <input className='discontinued'
+                <input data-testid="newDiscontinued" className='discontinued'
                 type="checkbox"
                 checked={newDiscontinued}
                 onChange={() => setNewDiscontinued(!newDiscontinued)}
@@ -110,7 +110,7 @@ const ProductAdd = ({setLisäystila, setIsPositive, setShowMessage, setMessage})
             <br/>
             
             <div className='formButtonit'>
-                <input id="lähetä" className='btnn vihreäBtn' type="submit" />
+                <input data-testid="lähetä" id="lähetä" className='btnn vihreäBtn' type="submit" />
                 <input type="button" value="Takaisin" className='btnn punainenBtn' onClick={() => setLisäystila(false)}></input>
             </div>
         </form>
