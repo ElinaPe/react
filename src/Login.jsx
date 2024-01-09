@@ -59,12 +59,12 @@ const Login = ({setIsPositive, setShowMessage, setMessage, setLoggedUser, setAdm
         <form onSubmit={handleSubmit} className='formi'>
             <div className='formtiedot'>
                 <label>Käyttäjätunnus</label>
-                <input type="text" value={newUsername} 
+                <input id="loginName" type="text" value={newUsername} 
                 onChange={({target}) => setNewUsername(target.value)} />
             </div>
             <div className='formtiedot'>
                 <label>Salasana</label>
-                <input type="password" minLength="5" value={newPassword} 
+                <input id="loginPass" type="password" minLength="5" value={newPassword} 
                 onChange={({target}) => setNewPassword(target.value)} />
             </div>
 
